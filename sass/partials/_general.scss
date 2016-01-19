@@ -1,0 +1,113 @@
+﻿//@import "bourbon";
+@import "../mixins/colors";
+@import "../mixins/custom-mixins";
+
+html, html * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    font-family:'VAGRoundedStd-Light', Arial, sans-serif;
+    font-size:100%;
+    letter-spacing: 0.05em;
+    width:100%;
+    overflow-x:hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:normal!important;
+    color:$pl-blue;
+}
+
+h1 {
+    font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
+    text-align:center;
+    margin:0;
+    font-size:2.25em;
+}
+
+p {
+    line-height:170%;
+    color:$pl-grey;
+    font-size:1.1em;
+}
+
+p.section-intro {
+    text-align:center;
+    width:100%;
+    max-width:570px;
+    margin:0 auto;
+    margin-top:20px;
+    margin-bottom:50px;
+}
+
+.clear {
+    clear:both;
+}
+
+.diag-border {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+section.light-grey-section {
+    background-color:$pl-grey-light;
+}
+
+.centre-element {
+    text-align:center;
+    margin-top:45px;
+}
+
+.rounded-section-btn, .rounded-link-list li a {
+    @include border-radius(28px);
+    background-color:$pl-grey-light;
+    color:$pl-grey;
+    font-size:1.1em;
+    font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
+    text-decoration:none;
+    line-height:36px;
+    padding:12px 40px;
+    height:56px;
+    display:inline-block;
+    margin:0 auto;
+    text-align:center;
+    @include transition(all 0.3s);
+    &:hover {
+        color:#ffffff;
+        background-color:$pl-blue;
+    }
+}
+
+.rounded-link-list {
+    list-style:none;
+    margin:0 auto;
+    padding:0;
+    display:block;
+    position:relative;
+    width:100%;
+    text-align:center;
+    li {
+        display:inline;
+        padding:0 4px;
+        margin:0;
+        a {
+            background-color:$pl-blue;
+            color:#ffffff;
+            &:hover {
+                background-color:#ffffff;
+                color:$pl-blue;
+            }
+        }
+    }
+}
+
+.padding-60 {
+    padding:60px 0;
+}
+
+.our-products {
+    background-image:url(../img/corner-circle.png);
+}

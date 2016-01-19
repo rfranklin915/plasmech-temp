@@ -1,5 +1,9 @@
-﻿@import "bourbon";
-
-body {
-    display:none;
-}
+﻿//@import "bourbon";
+@import "mixins/colors";
+@import "vendor/bootstrap";
+@import "vendor/animate";
+@import "partials/_general";
+@import "mixins/fonts";
+@import "partials/_header";
+@import "partials/_hero";
+@import "partials/_marketsectors";

@@ -1,0 +1,42 @@
+﻿//@import "bourbon";
+@import "../mixins/colors";
+@import "../mixins/custom-mixins";
+
+header#main-header {
+    background:$pl-blue;
+    padding:20px 0;
+    #plasmech-logo-header {
+        max-width:161px;
+        .st0 {
+            fill:#ffffff;
+        }
+    }
+    nav#main-nav {
+        float:right;
+        ul {
+            list-style:none;
+            margin:0;
+            padding-top:7px;
+            li {
+                display:inline;
+                padding:0 14px;
+                a {
+                    color:#ffffff;
+                    text-decoration:none;
+                    padding:10px 19px;
+                    font-size:1.1em;
+                    margin-top:6px;
+                    @include border-radius(4px);
+                    @include transition(all 0.25s);
+                    &:hover {
+                        background:lighten($pl-blue, 10%);
+                    }
+                }
+                &:last-child {
+                    padding-right:0;
+                }
+            }
+        }
+    }
+}
+
