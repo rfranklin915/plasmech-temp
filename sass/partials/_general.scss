@@ -35,7 +35,7 @@ h2 {
     font-size:2.25em;
 }
 
-p {
+p, ul {
     line-height:170%;
     color:$pl-grey;
     font-size:1.1em;
@@ -150,11 +150,15 @@ ul.summary-info {
     list-style:none;
     padding:0;
     margin:0;
+    display:inline-block;
+    width:100%;
+    margin:0!important;
     li {
         display:inline;
         padding:0;
         margin:0;
         color:$pl-grey;
+        font-size:0.9em;
         &:first-child {
             padding-right:8px;
             &:after {

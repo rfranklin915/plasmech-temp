@@ -7,3 +7,11 @@ var wow = new WOW(
   }
 );
 wow.init();
+
+
+$(document).ready(function(){
+    $('.article-img-slider').slick({
+        arrows: false,
+        dots: true
+    });
+});
