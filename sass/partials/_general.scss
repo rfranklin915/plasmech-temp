@@ -21,10 +21,17 @@ h1, h2, h3, h4, h5, h6 {
     color:$pl-blue;
 }
 
-h1 {
+h1, h2 {
     font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
     text-align:center;
     margin:0;
+}
+
+h1 {
+    font-size:2.9em;
+}
+
+h2 {
     font-size:2.25em;
 }
 
@@ -41,6 +48,10 @@ p.section-intro {
     margin:0 auto;
     margin-top:20px;
     margin-bottom:50px;
+}
+
+img {
+    max-width:100%;
 }
 
 .clear {
@@ -109,5 +120,55 @@ section.light-grey-section {
 }
 
 .our-products {
-    background-image:url(../img/corner-circle.png);
+    background-image:url(../img/corner.png);
+    background-repeat:no-repeat;
+    background-position:bottom right;
+}
+
+.summary-link {
+    text-decoration:none;
+    display:block;
+    div.diag-border {
+        overflow:hidden;
+    }
+    img {
+        @include transition(all 0.3s);
+    }
+    h4 {
+        font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
+        margin:15px 0;
+    }
+    &:hover {
+        img {
+            @include border-radius(20px);
+            @include opacity(0.8);
+        }
+    }
+}
+
+ul.summary-info {
+    list-style:none;
+    padding:0;
+    margin:0;
+    li {
+        display:inline;
+        padding:0;
+        margin:0;
+        color:$pl-grey;
+        &:first-child {
+            padding-right:8px;
+            &:after {
+                content:'•';
+                margin-left:12px;
+            }
+        }
+        a {
+            color:$pl-grey;
+            text-decoration:none;
+            @include transition(0.3s);
+            &:hover {
+                color:darken($pl-grey, 30%);
+            }
+        }
+    }
 }
