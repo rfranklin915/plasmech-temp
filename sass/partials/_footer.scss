@@ -151,3 +151,38 @@ footer#main-footer {
         }
     }
 }
+
+@media only screen and (max-width:490px) {
+    footer#main-footer {
+        nav#footer-nav {
+            ul {
+                padding-left:15px;
+                padding-right:15px;
+                li {
+                    width:25%;
+                    a {
+                        width:100%;
+                        text-align:center;
+                        padding-left:0;
+                        padding-right:0;
+                        font-size:0.9em;
+                    }
+                }
+            }
+        } 
+    } 
+
+    footer#main-footer ul#footer-social-links li a {
+        margin:0 9px;
+        margin-bottom:18px;
+    }
+
+    footer#main-footer .main-footer-lower nav.footer-sub-nav ul li {
+        width:100%;
+        display:block;
+        border:0;
+        a {
+            width:100%;
+        }
+    }
+}

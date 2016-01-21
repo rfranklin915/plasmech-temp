@@ -73,7 +73,7 @@
             margin:0;
             width:100%;
             font-size:1em;
-            a {
+            a, span {
                 color:$pl-grey;
                 text-decoration:none;
                 padding:12px 0;
@@ -87,11 +87,11 @@
                 li {
                     padding:0 20px;
                     &:first-child {
-                        a {
+                        a, span {
                             border:0;
                         }
                     }
-                    a {
+                    a, span {
                         &:hover {
                             color:$pl-blue;
                             padding-left:3px;
@@ -103,7 +103,7 @@
         }
     }
     > ul > li {
-            > a {
+            > span {
                 color:$pl-blue;
                 font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
                 padding-left:20px;
@@ -116,7 +116,7 @@
                 border-top-left-radius: 6px;
                 border-top-right-radius: 6px;
             }
-            &:first-child > a {
+            &:first-child > span {
                 border:0;
             }
         }
@@ -188,4 +188,78 @@
             }
         }
     }
+}
+
+
+@media only screen and (max-width:767px) {
+    .article-further-links {
+        display:none;
+    }
+
+    .main-article {
+        padding-top:0;
+    }
+
+    .article-subnav {
+        margin:0;
+        padding:0;
+        @include border-radius(0px);
+        > ul > li {
+            span {
+                @include border-radius(0px);
+                &:before {
+                    font-family:'plasmech';
+                    content:'\E004';
+                    font-size:16px;
+                    color:$pl-blue;
+                    display:inline-block;
+                    margin-right:12px;
+                    @include transition(all 0.3s);
+                }
+                &.active {
+                    &:before {
+                        @include rotate(180deg);
+                    }
+                }
+            }
+            > ul {
+                display:none;
+                padding:0;
+            }
+        } 
+    }
+
+    .right-content-col {
+        padding-top:30px;
+    }
+
+
+    .main-article div.article-img-container {
+        padding:7px 0;
+    }
+
+    .article-img-slider {
+        ul.slick-dots {
+            position:absolute;
+            bottom:15px;
+            text-align:right;
+            padding-right:20px;
+            li {
+                padding:0 6px;
+                button {
+                    border:0;
+                    background:#ffffff;
+                    width:12px;
+                    height:12px;
+                    vertical-align:top;
+                }
+                &.slick-active {
+                    button {
+                        border:3px solid #ffffff;
+                    }
+                }
+            }
+        }
+    } 
+
 }

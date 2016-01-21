@@ -669,3 +669,44 @@ To use the grid with the wider guttering, just add the 'wide-margins' class to t
     margin-left: 0%;
   }
 }
+
+
+@media only screen and (max-width:767px) {
+    .container.wide-margins.wide-margins {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (min-width: 768px) {
+      .container.wide-margins {
+        width: 790px;
+      }
+    }
+    @media (min-width: 992px) {
+      .container.wide-margins {
+        width: 1010px;
+      }
+    }
+    @media (min-width: 1310px) {
+      .container.wide-margins {
+        width: 1270px;
+      }
+    }
+    .container.wide-margins-fluid {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .container.wide-margins .row {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .container.wide-margins .col-xs-1, .container.wide-margins .col-sm-1, .container.wide-margins .col-md-1, .container.wide-margins .col-lg-1, .container.wide-margins .col-xs-2, .container.wide-margins .col-sm-2, .container.wide-margins .col-md-2, .container.wide-margins .col-lg-2, .container.wide-margins .col-xs-3, .container.wide-margins .col-sm-3, .container.wide-margins .col-md-3, .container.wide-margins .col-lg-3, .container.wide-margins .col-xs-4, .container.wide-margins .col-sm-4, .container.wide-margins .col-md-4, .container.wide-margins .col-lg-4, .container.wide-margins .col-xs-5, .container.wide-margins .col-sm-5, .container.wide-margins .col-md-5, .container.wide-margins .col-lg-5, .container.wide-margins .col-xs-6, .container.wide-margins .col-sm-6, .container.wide-margins .col-md-6, .container.wide-margins .col-lg-6, .container.wide-margins .col-xs-7, .container.wide-margins .col-sm-7, .container.wide-margins .col-md-7, .container.wide-margins .col-lg-7, .container.wide-margins .col-xs-8, .container.wide-margins .col-sm-8, .container.wide-margins .col-md-8, .container.wide-margins .col-lg-8, .container.wide-margins .col-xs-9, .container.wide-margins .col-sm-9, .container.wide-margins .col-md-9, .container.wide-margins .col-lg-9, .container.wide-margins .col-xs-10, .container.wide-margins .col-sm-10, .container.wide-margins .col-md-10, .container.wide-margins .col-lg-10, .container.wide-margins .col-xs-11, .container.wide-margins .col-sm-11, .container.wide-margins .col-md-11, .container.wide-margins .col-lg-11, .container.wide-margins .col-xs-12, .container.wide-margins .col-sm-12, .container.wide-margins .col-md-12, .container.wide-margins .col-lg-12 {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+}

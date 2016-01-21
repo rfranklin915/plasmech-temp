@@ -13,7 +13,6 @@ body {
     font-size:100%;
     letter-spacing: 0.05em;
     width:100%;
-    overflow-x:hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -128,6 +127,10 @@ section.light-grey-section {
     padding:60px 0;
 }
 
+.article-padding {
+    padding:60px 0;
+}
+
 .our-products {
     background-image:url(../img/corner.png);
     background-repeat:no-repeat;
@@ -234,5 +237,24 @@ ul.summary-info {
     }
     a.next {
         float:right;
+    }
+}
+
+
+@media only screen and (max-width:767px) {
+    .article-padding {
+        padding:0 0 60px 0;
+    }
+
+    .left-nav-col {
+        padding-left:0!important;
+        padding-right:0!important;
+    }
+
+    .prev-next {
+        a {
+            width:100%;
+            margin-bottom:15px;
+        }
     }
 }
