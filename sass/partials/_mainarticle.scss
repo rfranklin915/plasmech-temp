@@ -81,6 +81,7 @@
                 width:100%;
                 border-top:1px solid darken($pl-grey-light, 5%);
                 font-size:1.1em;
+                @include transition(all 0.25s);
             }
             ul {
                 li {
@@ -93,6 +94,7 @@
                     a {
                         &:hover {
                             color:$pl-blue;
+                            padding-left:3px;
                         }
                     }
                 }
@@ -173,7 +175,7 @@
     h3 {
         font-size:1.5em; 
         font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
-        margin:0 0 15px 0;
+        margin:0 0 25px 0;
     }
     ul.rounded-link-list {
         text-align:left;

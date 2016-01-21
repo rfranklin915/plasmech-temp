@@ -1,0 +1,71 @@
+﻿//@import "bourbon";
+@import "../mixins/colors";
+@import "../mixins/custom-mixins";
+
+.tab-area {
+    padding-top:20px;
+    border-bottom:1px solid $pl-grey-light;
+    float:left;
+    width:100%;
+    .tab {
+        float:left;
+        width:100%;
+        border-top:1px solid $pl-grey-light;
+        h3 {
+            font-size:1.4em;
+            font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
+            margin:0;
+            position:relative;
+            a {
+                display:block;
+                color:$pl-blue;
+                text-decoration:none;
+                @include transition(all 0.3s);
+                padding:24px 0;
+                &:after {
+                    font-family:'plasmech';
+                    @include transition(all 0.3s);
+                    content:"\E009";
+                    font-size:20px;
+                    color:$pl-blue;
+                    position:absolute;
+                    right:0;
+                    top:28px;
+                }
+                &:hover {
+                    color:darken($pl-blue, 10%);
+                    padding-left:5px;
+                    &:after {
+                        right:5px;
+                    }
+                }
+            }
+        }
+        .tab-inner {
+            display:none;
+            float:left;
+            width:100%;
+            padding-bottom:20px;
+            p {
+                margin:0 0 15px 0;
+                width:100%;
+            }
+            img {
+                float:left;
+                vertical-align:top;
+                margin:0 20px 20px 0;
+                max-width:100px;
+                @include border-radius(50%);
+            }
+        }
+        &.active {
+            a {
+                &:after {
+                    content:"\E008";
+                    color:$pl-grey;
+                }
+            }
+        }
+    }
+    
+}
