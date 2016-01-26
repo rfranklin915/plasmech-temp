@@ -1,0 +1,9 @@
+﻿//@import "bourbon";
+@import "../mixins/colors";
+@import "../mixins/custom-mixins";
+
+.all-news {
+    .row {
+        margin:45px 0 30px 0;
+    }
+}

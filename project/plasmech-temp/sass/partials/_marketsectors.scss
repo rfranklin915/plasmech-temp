@@ -1,0 +1,66 @@
+﻿//@import "bourbon";
+@import "../mixins/colors";
+@import "../mixins/custom-mixins";
+
+.market-sectors-container {
+    a {
+        padding:15px 58px 15px 135px;
+        background-color:$pl-grey-light;
+        min-height:110px;
+        float:left;
+        width:100%;
+        display:block;
+        margin-bottom:10px;
+        @include border-radius(5px);
+        text-decoration:none;
+        vertical-align:middle;
+        position:relative;
+        @include transition(all 0.3s);
+        h3 {
+            margin:0;
+            font-size:1.65em;
+            color:$pl-blue;
+            padding-top:21px;
+            font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
+        }
+        p {
+            font-size:1em;
+            @include transition(all 0.3s);
+        }
+        div.sector-copy {
+            overflow: hidden;
+        }
+        img {
+            width:80px;
+            height:80px;
+            @include border-radius(50%);
+            border:3px solid #ffffff;
+            position:absolute;
+            top:50%;
+            left:30px;
+            margin-top:-40px;
+        }
+        &:before {
+            font-family:'plasmech';
+            content: "\E006";
+            color:darken($pl-grey-light,10%);
+            font-size:20px;
+            position:absolute;
+            right:20px;
+            top:50%;
+            margin-top:-10px;
+            @include transition(all 0.3s);
+
+        }
+        &:hover {
+            background-color:$pl-blue;
+            p, h3 {
+                color:#ffffff;
+            }
+            &:before {
+                color:#ffffff;
+                right:12px;
+            }
+        }
+    }
+}

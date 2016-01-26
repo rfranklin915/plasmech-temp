@@ -1,0 +1,65 @@
+﻿//@import "bourbon";
+@import "../mixins/colors";
+@import "../mixins/custom-mixins";
+
+.hero {
+    padding:180px 0;
+    background:#cecece;
+    text-align:center;
+    position:relative;
+    background-position:50% 50%;
+    background-size:cover;
+    .dark-overlay {
+        position:absolute;
+        top:0;
+        bottom:0;
+        width:100%;
+        background-image:url(../img/dark-overlay.png);
+        background-repeat:repeat;
+        z-index:40;
+    }
+    .hero-inner {
+        max-width:500px;
+        margin:0 auto;
+        display:inline-block;
+        z-index:45;
+        position:relative;
+        h1 {
+            color:#ffffff;
+            //font-size:2.7em;
+            margin:0 0 30px 0;
+            display:inline-block;
+        }
+        a {
+            background:#ffffff;
+            color:$pl-blue;
+            padding:20px 30px;
+            text-decoration:none;
+            font-family:'VAGRoundedStd-Bold', Arial, sans-serif;
+            font-size:1.5em;            
+            display:inline-block;
+            @include transition(all 0.3s);
+            &:hover {
+                @include border-radius(20px);
+            }
+        }
+    }
+    span.down-arrow {
+        position:absolute;
+        bottom:0;
+        z-index:45;
+        left:50%;
+        margin-left:-19px;
+        -webkit-animation: hero-arrow 1.3s infinite;
+        -moz-animation:    hero-arrow 1.3s infinite;
+        -o-animation:      hero-arrow 1.3s infinite;
+        animation:         hero-arrow 1.3s infinite;
+        &:before {
+            font-family:'plasmech';
+            content: "\E004";
+            color:#ffffff;
+            font-size:22px;
+            line-height:36px;            
+        }
+    }
+}
